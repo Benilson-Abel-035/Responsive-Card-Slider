@@ -1,0 +1,334 @@
+/*inicio padrao*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+/*fim padrao*/
+
+/*inicio body*/
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: url('../img/back_02.png') no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+/*fim body*/
+
+/*inicio header*/
+header {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	padding: 20px 100px;
+	background: rgba(0, 0, 0, .2);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 99;
+	border-top: 50px;
+}
+/*fim header*/
+
+/*inicio logo*/
+.logo {
+	font-size: 1.8rem;
+	color: white;
+	user-select: none;	
+}
+/*fim logo*/
+
+/*inicio navbar*/
+.navigation a {
+	position: relative;
+	font-size: 1.1rem;
+	color: white;
+	/* text-decoration: none; */
+	font-weight: 500;
+	margin-left: 40px;
+}
+#ancora {
+	text-decoration: none;
+}
+.navigation a::after {
+	content: '';	
+	position: absolute;
+	text-decoration: none;
+	left: 0;
+	bottom: -6px;
+	width: 100%;
+	height: 3px;
+	background: white;
+	border-radius: 5px;
+	transform-origin: right;
+	transform: scaleX(0);
+	transition: transform .5s;
+}
+
+.navigation a:hover::after {
+	transform-origin: left;
+	transform: scale(1);
+}
+/*fim navbar*/
+
+/*inicio botom login*/
+.navigation .btnLogin {
+	width: 130px;
+	height: 50px;
+	background: transparent;
+	border: 2px solid white;
+	outline: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 1.1rem;
+	color: white;
+	font-weight: 500;
+	margin-left: 40px;
+	transition: .5s;
+
+}
+
+.navigation .btnLogin:hover {
+	background: white;
+	color: #162938;
+}
+/*fim botom login
+
+
+/*inicio*/
+
+.wrapper {
+	position: relative;
+	width: 400px;
+	height: 440px;
+	background: transparent;
+	border: 2px solid rgba(255, 255, 255, .5);
+	border-radius: 20px;
+	backdrop-filter:  blur(20px);
+	box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+	display: flex;
+	margin-top: 15vh;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden; 
+}
+
+.wrapper .icon_close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 45px;
+	height: 45px;
+	background: #162938;
+	font-size: 2rem;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom-left-radius: 20px;
+	cursor: pointer;
+	z-index: 1;
+
+}
+
+.wrapper .form-box {
+	width: 100%;
+	padding: 40px;
+}
+
+.form-box h2{
+	font-size: 2rem;
+	color: #162938;
+	text-align: center;
+}
+
+.input-box {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	border-bottom: 2px solid #162938;
+	margin-left: 30px 0;
+}
+
+.input-box #data {
+	color: rgba(255, 255, 255, .8);
+	width: 108%;
+
+
+}
+/*
+.input-box label {
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	transform: translateY(-50%);
+	font-size: 1rem;
+	color: #162938;
+	font-weight: 500;
+	pointer-events: none;
+	transition: .5s;
+	
+}*/
+label {
+	opacity: 0;
+}
+
+.input-box input::placeholder {
+	color: rgba(255, 255, 255, .8);
+	font-size: .9rem;
+}
+
+.input-box input {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: white;
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 0 35px 0 5px;
+
+}
+
+.input-box .icon {
+	position: absolute;
+	right: 8px;
+	font-size: 1.2rem;
+	color: #162938;
+	/*color: white;*/
+
+	line-height: 57px;
+}
+
+.lembra-me label {
+	opacity: 1;
+}
+
+.lembra-me {
+	font-size: .8rem;
+	color: #162938;
+	font-weight: 900;
+	margin: 25px 0 25px;
+	display: flex;
+	/*flex-direction: column;*/
+	justify-content: space-between;
+	color: rgba(255, 255, 255, .8);
+	transition: .3s;
+
+}
+
+.lembra-me label:hover {
+	color: rgba(255, 255, 255, 1);
+	transition: .3s;
+} 
+.lembra-me a {
+	text-decoration: none;
+	transition: .3s;
+	color: #162938;
+
+}
+.lembra-me a:hover {
+	text-decoration: underline;
+	transition: .3s;
+	color: white;
+} 
+
+.btn {
+	width: 100%;
+	height: 45px;
+	background: #162938;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 1rem;
+	color: white;
+	font-weight: 500;
+}
+
+#login_registro {
+	font-size: .8rem;
+	color: white;
+	text-align: center;
+	font-weight: 500;
+	margin: 25px 0 10px ;
+}
+
+#registrar_link p, a {
+	text-decoration: none;
+	transition: .3s;
+	color: #162938;
+} 
+#registrar_link p, a:hover {
+	text-decoration: underline;
+	transition: .3s;
+	color: white;
+}
+
+
+/*fim*/
+
+/* Inicio Novo input Cadastro*/
+
+
+/* inicio */
+.wrapper .form-box#login {
+	/* display: none; */
+	position: absolute;
+	transition: transform .18s ease;
+	transform: translateX(0);
+}
+
+.wrapper.wrapper.active .form-box#login {
+	transition: none /*none*/;
+	transform: translateX(-400px);
+}
+/* fim */
+
+/* inicio */
+.wrapper .form-box#cadastro {
+	margin-top: 1%;
+}
+.tituloCadastro {
+	margin-bottom: 5%;
+}
+.wrapper .form-box#cadastro {
+	/* display: none; */
+	position: absolute;
+	transition: none; /* transform .18s ease; */
+	transform: translateX(400px);
+}
+
+.wrapper.wrapper.active .form-box#cadastro {
+	transition: transform .18s ease;  /*none*/
+	transform: translateX(0);
+}
+
+#cadastro {
+	position: absolute;
+	transform: translateX(400px);
+}
+/* fim */
+
+.wrapper.active-popup {
+	transform: scale(1);
+} 
+
+.wrapper {
+	transition: transform .5s ease, height .2s ease;
+	transform: scale(0);
+}
+
+
+.wrapper.active {
+	height: 480px /*520px*/;
+}
+
+
+/* Fim input Cadastro*/
